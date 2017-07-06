@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Oculus Rift",
+        "imgUrl": "https://images10.newegg.com/NeweggImage/ProductImage/A6V6_131104899116982783KrERbRfife.jpg",
+        "price": 45000
+    },
+    {
+        "id": 2,
+        "title": "HTC Vive",
+        "imgUrl": "https://www.vive.com/media/filer_public/93/85/938597a0-41ef-4a3d-941a-e05bbae6189c/strap-pdp-top-min-2.png",
+        "price": 45000
+    }
+]

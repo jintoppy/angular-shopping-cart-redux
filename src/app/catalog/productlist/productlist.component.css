@@ -1,0 +1,30 @@
+a{
+    margin-top: 10px;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: cyan;
+    color: #000;   
+    font-weight: bold; 
+}
+
+
+.item{
+    display: inline-block;
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #888;
+}
+
+.image img{
+    width: 100px;
+    height: 100px;
+}
+
+.image{
+    padding-right: 20px;
+    float: left;
+}
+

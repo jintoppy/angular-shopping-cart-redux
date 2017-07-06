@@ -1,0 +1,24 @@
+<div>
+    <h2>Virtual Reality Products</h2>
+
+    <div class="item" *ngFor="let p of products">
+      <div>
+        <div class="image">
+            <img [src]="p.imgUrl" />
+        </div>
+        <div class="details">
+            <h4>
+              {{p.title}}
+            </h4>
+            <p>
+              {{p.price | currency}}
+            </p>
+            
+            <button>Add to Cart</button>
+        </div>
+
+      <a [routerLink]="['productdetails', p.id]">View Details</a>
+      
+    </div>
+    
+</div>
