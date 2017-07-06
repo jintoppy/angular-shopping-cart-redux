@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HttpModule} from '@angular/http';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import {AppReducer} from './reducers';
 
 
 import { AppComponent } from './app.component';
@@ -27,7 +30,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     CartModule,
     CheckoutModule,
-    CatalogModule
+    CatalogModule,
+    StoreModule.provideStore(AppReducer),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
