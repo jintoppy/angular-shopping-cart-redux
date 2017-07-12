@@ -1,6 +1,11 @@
 <div>
   This is the Header Section
-
+  <p appHighlight>
+    This is a paragraph with highlight attached
+  </p>
+  <span appHighlight>
+    This is a paragraph with highlight attached
+  </span>
   <div class="navigation">
     <a [routerLink]="['/']">Home</a>
     <a [routerLink]="['/lazy/lazypage']">Lazy Page</a>
@@ -8,6 +13,9 @@
 
   <h1 i18n>Hello world!</h1>
 
+  <p>
+    This is a paragraph with highlight attached
+  </p>
   <div class="container">
     <router-outlet></router-outlet>
   </div>

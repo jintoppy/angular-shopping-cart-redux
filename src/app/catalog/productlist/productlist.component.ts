@@ -9,6 +9,7 @@ import {Store} from '@ngrx/store';
 })
 export class ProductlistComponent implements OnInit {
   products = [];
+  isLoading = false;
   constructor(
     private service:ProductService,
     private store: Store<Object>
