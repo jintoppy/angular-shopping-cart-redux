@@ -5,7 +5,8 @@ import {HttpModule} from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {AppReducer} from './reducers';
-
+import {ErrorHandler} from '@angular/core';
+import {AppErrorHandler} from './error.handler';
 
 import { AppComponent } from './app.component';
 import {CartModule} from './cart/cart.module';
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'catalog',
     pathMatch: 'full'
+  },
+  {
+    path: 'lazy',
+    loadChildren: './lazy/lazy.module#LazyModule'
   }
 ];
 
@@ -36,7 +41,9 @@ const routes: Routes = [
       maxAge: 5
     })
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorHandler, useClass: AppErrorHandler}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

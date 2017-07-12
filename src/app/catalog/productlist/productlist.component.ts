@@ -15,11 +15,11 @@ export class ProductlistComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.service.getProducts();
-    
+    this.service.getProducts();    
+
     this.store.select('catalog')
       .subscribe(x => {
-        this.products = x['products'];
+        this.products = x['products'];     
       });
   }
 
