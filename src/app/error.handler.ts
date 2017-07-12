@@ -7,5 +7,6 @@ export class AppErrorHandler extends ErrorHandler{
     handleError(msg){
         console.error('within error handler');
         console.info(msg);
+        super.handleError(msg);
     }
 }
