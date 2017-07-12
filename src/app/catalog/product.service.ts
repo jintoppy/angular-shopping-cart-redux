@@ -22,13 +22,8 @@ export class ProductService {
               })
               .map((res) => {
                   return res.json();
-              })
-              .subscribe(res => {
-                this.store.dispatch({
-                  type: 'PRODUCTS_LIST_RECEIVED',
-                  payload: res
-                });
-              })
+              });
+              
   }
 
   getProductById(productId){

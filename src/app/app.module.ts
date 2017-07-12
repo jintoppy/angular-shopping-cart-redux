@@ -7,6 +7,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import {AppReducer} from './reducers';
 import {ErrorHandler} from '@angular/core';
 import {AppErrorHandler} from './error.handler';
+import {CatalogActions} from './actions/catalog.action';
+import { EffectsModule } from '@ngrx/effects';
+
 
 import { AppComponent } from './app.component';
 import {CartModule} from './cart/cart.module';
@@ -42,6 +45,7 @@ const routes: Routes = [
     CheckoutModule,
     CatalogModule,
     StoreModule.provideStore(AppReducer),
+    EffectsModule.run(CatalogActions),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     })
@@ -51,7 +55,8 @@ const routes: Routes = [
       provide: ErrorHandler,
       useClass: AppErrorHandler
      },
-     LoginService
+     LoginService,
+     CatalogActions
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../product.service';
 import {Store} from '@ngrx/store';
+import {CatalogActions} from '../../actions/catalog.action';
 
 @Component({
   selector: 'app-productlist',
@@ -12,11 +13,13 @@ export class ProductlistComponent implements OnInit {
   isLoading = false;
   constructor(
     private service:ProductService,
-    private store: Store<Object>
+    private store: Store<Object>,
+    private catalogActions: CatalogActions
     ) { }
 
   ngOnInit() {
-    this.service.getProducts();    
+    //this.service.getProducts();
+    this.store.dispatch(this.catalogActions.getProducts())
 
     this.store.select('catalog')
       .subscribe(x => {
