@@ -12,8 +12,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod",
-    "generatexlf": "ng x18n --output-path src/i18n",
-    "french": "ng serve --aot --i18n-file=src/i18n/messages.fr.xlf --locale=fr --i18n-format=xlf"
+    "generatexlf": "ng xi18n --output-path src/i18n",
+    "french": "ng build --aot --i18n-file=src/i18n/messages.fr.xlf --locale=fr --i18n-format=xlf"
   },
   "private": true,
   "dependencies": {

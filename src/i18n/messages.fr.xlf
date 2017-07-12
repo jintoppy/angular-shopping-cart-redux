@@ -2,20 +2,22 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="801ebd128d066af165032908048bf85435e62e0a" datatype="html">
-        <source>Hello world!</source>
-        <target>FR Hello World</target>
+      <trans-unit id="maintitle" datatype="html">
+        <source>Hello!</source>
+        <target>French Hello</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">4</context>
+          <context context-type="sourcefile">C:/Training/shopping-cart/src/app/app.component.ts</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="productListHeader" datatype="html">
-        <source>Virtual Reality Products</source>
-        <target>FR Virtual Reality Products</target>
+      <trans-unit id="mainparagraph" datatype="html">
+        <source>
+    This is a paragraph with highlight attached
+  </source>
+        <target>French Language This is a paragraph with highlight attached</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/catalog/productlist/productlist.component.ts</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="sourcefile">C:/Training/shopping-cart/src/app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
     </body>
