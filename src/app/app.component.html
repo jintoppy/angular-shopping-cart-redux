@@ -10,6 +10,8 @@
     <a [routerLink]="['/']">Home</a>
     <a [routerLink]="['/lazy/lazypage']">Lazy Page</a>
   </div>
+<app-login></app-login>
+
 
   <h1 i18n>Hello world!</h1>
 
@@ -19,6 +21,7 @@
   <div class="container">
     <router-outlet></router-outlet>
   </div>
+
 
   <button (click)="onThrowError()">Throw Error</button>
 

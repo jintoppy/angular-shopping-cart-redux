@@ -13,6 +13,8 @@ import {CartModule} from './cart/cart.module';
 import {CheckoutModule} from './checkout/checkout.module';
 import {CatalogModule} from './catalog/catalog.module';
 import { HighlightDirective } from './highlight.directive';
+import { LoginComponent } from './login/login.component';
+import {LoginService} from './login/login.service';
 
 const routes: Routes = [
   {
@@ -29,7 +31,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ const routes: Routes = [
     {
       provide: ErrorHandler,
       useClass: AppErrorHandler
-     }
+     },
+     LoginService
   ],
   bootstrap: [AppComponent]
 })

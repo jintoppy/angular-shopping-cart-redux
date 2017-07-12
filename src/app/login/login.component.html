@@ -1,0 +1,14 @@
+<fieldset>
+    <legend>
+        Login
+    </legend>
+    <div>
+          Username: <input type="text" #username>
+        </div>
+         <div>  
+           Password:  <input type="password" #password>
+        </div> 
+          <button (click)="onLogin(username.value, password.value)">
+              Login
+          </button>
+</fieldset>
