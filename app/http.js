@@ -1,7 +1,6 @@
 import fs from 'fs';
 import express from 'express';
 import bodyParser from 'body-parser';
-import AppRouter from './routes';
 import ApiRouter from './routes/api';
 import mongoose from 'mongoose';
 
@@ -17,7 +16,9 @@ app.use((req, res, next) => {
 });
 app.use(express.static('./dist'));
 app.use('/api', ApiRouter);
-app.use('/', AppRouter);
+app.get('/*', (req, res) => {
+    res.sendfile('./dist/index.html');
+});
 app.listen(3000, () => {
     console.log('listening on 3000');
 });

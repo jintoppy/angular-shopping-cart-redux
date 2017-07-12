@@ -1,9 +1,9 @@
 # ShoppingCart
 
-`build:server` builds the server
+`npm run build:server` builds the server
 
-`start:server` starts the server
+`npm run start:server` starts the server
 
-`build` builds angular
+`npm run build` builds angular
 
 http://localhost:3000
